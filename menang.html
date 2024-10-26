@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamu Menang!</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: url('images/menang.jpg') no-repeat center center; /* Ganti dengan gambar background yang sesuai */
+            background-size: cover;
+            overflow: hidden;
+        }
+        h1 {
+            margin: 20px 0;
+            font-size: 2.5em;
+            color: #fff; /* Warna teks bisa disesuaikan */
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            /* align-items: center; */
+            /* justify-content: center; */
+            top: 0;
+        }
+
+        .win-image {
+            width: 100%;
+            max-width: 500px; /* Sesuaikan ukuran gambar judul */
+            height: 50%;
+        }
+        .moving {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .moving-image {
+            width: 100%;
+            max-width: 500px; /* Sesuaikan ukuran gambar surat */
+            animation: scale 1s infinite alternate;
+        }
+
+        @keyframes scale {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+        .spacer {
+            height: 60px; /* Jarak antara gambar judul dan gambar surat */
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            Swal.fire({
+                title: "Yeey!!!", 
+                text: "Kamu Berhasil Nyelesaiin Gamenya!",
+                imageUrl: 'images/alert-menang.png',
+                imageWidth:90,
+                imageHeight: 150,
+                imageAlt: 'Alert Menang',
+                confirmButtonText: 'OK'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Mulai musik setelah pengguna menekan tombol OK
+                    const backgroundMusic = new Audio('sound.mp3'); // Ganti dengan path file musik
+                    const menang = new Audio('menang.mp3');
+                    backgroundMusic.play();
+                    menang.play();
+                }
+            });
+        });
+    </script>
+    <div class="container">
+        <!-- <h1>Kamu Menang!</h1> -->
+        <img src="images/winner.jpg" alt="Kamu Menang!" class="win-image"><!-- Gambar judul -->
+        <div class="spacer"></div> <!-- Jarak -->
+        <div class="moving">
+            <a href="game.html"><img src="images/game.jpg" alt="Surat" class="moving-image" style="height: 60px; width: auto;"></a><!-- Gambar surat yang bergerak -->
+            <a href="ultah.html"><img src="images/surat.jpg" alt="Surat" class="moving-image" style="height: 68px; width: auto;"></a><!-- Gambar surat yang bergerak -->
+
+        </div>
+    </div>
+    
+</body>
+</html>

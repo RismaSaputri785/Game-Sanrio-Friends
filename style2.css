@@ -1,0 +1,388 @@
+:root {
+    --primary: rgb(255, 134, 233);
+}
+*{
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+body{
+    background-color: #ffd8f1;
+    overflow-x: hidden;
+}
+
+
+.bg{
+    margin: 0.3rem;
+    margin-top: 0;
+}
+
+
+.bg .pembuka {
+    width: 100%;
+    height: 100vh;
+}
+
+
+
+/* M e d i a   Q u e r i s */
+
+@media (max-width: 650px) {
+    .bg .pal-atas {
+        display: flex;       
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .bg .pal-atas img{
+        height: 4rem;
+        width: 100%;
+    }
+
+
+    /* P E M B U K A */
+    .bg .pembuka h1{
+        position: relative;
+        margin-top: -0.5rem;
+        margin-bottom: 0.2rem;
+        font-size: 2rem;
+        text-align: center;
+        font-variant: small-caps;
+
+    }
+
+    .bg .pembuka p{
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+    .bg .pembuka h3{
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+    }
+    .bg .pembuka h4{
+        text-align: center;
+        font-size: 1.3rem;
+    }
+
+    /* F O T O   D E P A N */
+
+    .bg .pembuka .foto-depan {
+        justify-content: space-between;
+        display: flex;
+    }
+
+    .bg .pembuka .foto-depan .balon {
+        width: 7rem;
+        height: 10rem;
+    }
+
+    .bg .pembuka .foto-depan .foto-pembuka {
+        width: 25vh;
+        height: 40vh;
+        position: relative;
+        margin-bottom: 1rem;
+        border-radius: 10px;
+
+    }
+
+    .bg .pembuka h6 {
+        text-align: center;
+        font-size: 1rem;
+        padding-bottom: 2rem;
+        height: 1rem;
+    } 
+
+    
+
+
+    /* p e n g e n a l a n */
+    .bg #pengenalan {
+        margin-top: 1.5rem;
+        padding-top: 0.8rem;
+        height: 100vh;
+    }
+
+    .bg #pengenalan h1{
+        text-align: center;
+        background-color: var(--primary);
+        border-radius: 10px;
+        padding: 0.4rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .bg #pengenalan p{
+        padding-bottom: 1.2rem;
+        padding: 0.5rem 2rem;
+        text-align: justify;
+        font-weight: bold;
+    }
+    .bg #pengenalan .Foto-kenalan .poto {
+        width: 20vh;
+        height: 33vh;
+        left: 35%;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+    }
+
+    .bg #pengenalan .Foto-kenalan{
+        display: flex;
+        justify-content: center;
+    }
+
+    .bg #pengenalan .Foto-kenalan .hiasan,
+    .bg #ucapan .Foto-ucapan .hiasan{
+        margin-top: 1.8rem;
+        height: 7rem;
+        width: 6rem;
+    }
+
+    
+
+    /* U C A P A N */
+    .bg #ucapan {
+        margin-top: 2rem;
+        padding-top: 0.8rem;
+        height: 100vh;
+    }
+
+    .bg #ucapan h1 {
+        text-align: center;
+        padding: 0.6rem;
+        margin-top: 2rem;
+        background-color: var(--primary);
+        border-radius: 10px;
+    }
+
+    .bg #ucapan .poto {
+        width: 88vh;
+        height: 69vh;
+        border-radius: 10px;
+        margin-left: -4rem;
+    }
+
+    
+
+    /* b e r t i g a */
+
+    .bg #galery {
+        padding: 2rem;
+        height: 100vh;
+        list-style: none;
+        box-sizing: border-box;
+    }
+
+    .bg #galery h2{
+        margin-top: -1rem;
+        text-align: center;
+        margin-bottom: 0.5rem;
+        background-color: var(--primary);
+        border-radius: 10px;
+    }
+
+    .bg #galery .kels {
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .bg #galery .kels .isi-galery{     
+        padding: 1rem;
+        
+    }
+
+    .bg #galery .kels .kel-1,
+    .bg #galery .kels .kel-2,
+    .bg #galery .kels .kel-3{
+        display: flex;
+        margin-bottom: -1.5rem;
+    }
+
+    .bg #galery .kels .kel-1 .isi-galery img,
+    .bg #galery .kels .kel-2 .isi-galery img,
+    .bg #galery .kels .kel-3 .isi-galery img{
+        height: 6rem;
+        width: 8rem;
+        border-radius: 10px;
+        
+    }
+
+    .bg #galery .kels .kel-1 .isi-galery h4,
+    .bg #galery .kels .kel-2 .isi-galery h4,
+    .bg #galery .kels .kel-3 .isi-galery h4{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .clear {
+        clear: left;
+    } 
+
+    /* p e n u t u p */
+    
+    .bg #penutup{ 
+        height: 100vh;
+        margin-top: 1rem;
+        width: 100%;
+        padding-top: 4rem;
+    }
+
+    .bg #penutup h1{
+        text-align: center;
+        background-color: var(--primary);
+        border-radius: 10px;
+    }
+
+    .bg #penutup img {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        justify-content: center;
+        display: flex;
+        height: 30vh;
+        width: 30vh;
+        margin-left: 100px;
+    }
+
+    .bg #penutup h2 {
+        text-align: center;
+        padding: 0.9rem;
+        margin-top: 1rem;
+    }
+
+    .bg #penutup p {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    /* P A C K */
+    .bg .bawah {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        margin-top: -14rem;
+        height: 200px;
+    }
+    
+
+    /* P A C K 2*/
+    .bg .bawah2 {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        margin-top: -5rem;
+        margin-bottom: 1rem;
+    }
+    .bg .bawah2 .pack {
+        background-color: var(--primary);
+        display: flex;
+        border-radius: 18px;
+        width: 18em;
+        height: 3rem;
+        justify-content: space-between;
+        padding: 0.8rem;
+    }
+
+    .bg .bawah2 .pack img {
+        width: 1.6rem;
+        height: 1.6rem;
+        display: flex;
+    }
+
+    /* P A C K 3*/
+    .bg .bawah3 {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        margin-top: -5rem;
+    }
+    .bg .bawah3 .pack {
+        background-color: var(--primary);
+        display: flex;
+        border-radius: 18px;
+        width: 18em;
+        height: 3rem;
+        justify-content: space-between;
+        padding: 0.8rem;
+    }
+
+    .bg .bawah3 .pack img {
+        width: 1.6rem;
+        height: 1.6rem;
+        display: flex;
+    }
+
+    /* P A C K 4*/
+    .bg .bawah4 {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        margin-top: -5rem;
+    }
+    .bg .bawah4 .pack {
+        background-color: var(--primary);
+        display: flex;
+        border-radius: 18px;
+        width: 18em;
+        height: 3rem;
+        justify-content: space-between;
+        padding: 0.8rem;
+    }
+
+    .bg .bawah4 .pack img {
+        width: 1.6rem;
+        height: 1.6rem;
+        display: flex;
+    }
+
+    /* P A C K 5*/
+    .bg .bawah5 {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        margin-top: -5rem;
+    }
+    .bg .bawah5 .pack {
+        background-color: var(--primary);
+        display: flex;
+        border-radius: 18px;
+        width: 18em;
+        height: 3rem;
+        justify-content: space-between;
+        padding: 0.8rem;
+    }
+
+    .bg .bawah5 .pack img {
+        width: 1.6rem;
+        height: 1.6rem;
+        display: flex;
+    }
+
+
+    /* P E N U T U P */
+    .kado {
+        margin: 1rem;
+        margin-top: 1.5rem;
+        flex-wrap: wrap;
+
+    }
+    .kado .judul {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .kado .isi {
+        width: 100vh;
+        margin-top: 6rem;
+        margin-left: 0.5rem;
+        box-sizing: border-box;
+        justify-content: center;
+        display: flex;
+        height: 300px; 
+        width: auto;
+    }
+}

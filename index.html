@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Sanrio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffd8f1;
+            flex-direction: column;
+        }
+
+        .container {
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
+            padding-top: 40px;
+        }
+
+        .character{
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 20px;
+            height: auto;
+        }
+        .title{
+            height: 150px;
+            /* max-width: 100px; */
+        }
+        .play-button{
+            /* width: 100%; */
+            max-width: 300px;
+            margin-bottom: 20px;
+            height: 10px;
+        }
+
+        .play-button {
+            border: none;
+            background: none;
+            cursor: pointer;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="images/judul.jpg" alt="Title" class="title" >
+        <img src="images/sanrio.jpg" alt="Character" class="character">
+        <button id="play-button" class="play-button">
+            <img src="images/button-play.png" alt="Play Button">
+        </button>
+    </div>
+    <audio id="background-music" src="sound.mp3" loop></audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const playButton = document.getElementById('play-button');
+            const backgroundMusic = document.getElementById('background-music');
+
+            // Fungsi untuk memutar musik
+            const playMusic = () => {
+                backgroundMusic.play().catch(error => {
+                    console.log('Gagal memutar musik secara otomatis:', error);
+                });
+            };
+
+            // Tampilkan SweetAlert dan mulai musik saat tombol OK diklik
+            Swal.fire({
+                title: "Selamat Datang, di<br> Game Sanrio!",
+                // text: "Tekan Ok.",
+                imageUrl: 'images/welcome.jpg',
+                imageWidth: 400,
+                imageHeight: 300,
+                imageAlt: 'Welcome image',
+                showCancelButton: false,
+                confirmButtonText: 'OK'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    playMusic();
+                }
+            });
+
+            // Event listener untuk tombol play
+            playButton.addEventListener('click', () => {
+                window.location.href = "game.html"; // Ganti dengan halaman berikutnya
+            });
+        });
+    </script>
+</body>
+</html>
