@@ -43,7 +43,7 @@ body{
 
 
     /* P E M B U K A */
-    .bg .pembuka h2{
+    .bg .pembuka h1{
         position: relative;
         margin-top: -0.5rem;
         margin-bottom: 0.2rem;
@@ -61,7 +61,7 @@ body{
     .bg .pembuka h3{
         text-align: center;
         margin-top: 1rem;
-        font-size: 1.8rem;
+        font-size: 1rem;
         margin-bottom: 0.5rem;
     }
     .bg .pembuka h4{
