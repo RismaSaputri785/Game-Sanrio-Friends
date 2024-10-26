@@ -262,9 +262,9 @@ body{
     /* P A C K */
     .bg .bawah {
         width: 100%;
-        justify-content: center;
-        display: flex;
-        margin-top: -14rem;
+/*         justify-content: center;
+        display: flex; */
+        margin-top: -20rem;
         height: 200px;
     }
     
