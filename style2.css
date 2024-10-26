@@ -61,7 +61,7 @@ body{
     .bg .pembuka h3{
         text-align: center;
         margin-top: 1rem;
-        font-size: 1rem;
+        font-size: 1.4rem;
         margin-bottom: 0.5rem;
     }
     .bg .pembuka h4{
@@ -77,12 +77,12 @@ body{
     }
 
     .bg .pembuka .foto-depan .balon {
-        width: 6rem;
+        width: 7rem;
         height: 10rem;
     }
 
     .bg .pembuka .foto-depan .foto-pembuka {
-        width: 25vh;
+        width: 18vh;
         height: 40vh;
         position: relative;
         margin-bottom: 1rem;
